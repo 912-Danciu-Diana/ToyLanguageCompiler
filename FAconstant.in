@@ -1,0 +1,24 @@
+I.S -> Start
+F.S -> Zero NonZero
+S.S -> Start Zero NonZero
+Alph -> 0 1 2 3 4 5 6 7 8 9
+T -> Start 0 Zero
+T -> Start 1 NonZero
+T -> Start 2 NonZero
+T -> Start 3 NonZero
+T -> Start 4 NonZero
+T -> Start 5 NonZero
+T -> Start 6 NonZero
+T -> Start 7 NonZero
+T -> Start 8 NonZero
+T -> Start 9 NonZero
+T -> NonZero 0 NonZero
+T -> NonZero 1 NonZero
+T -> NonZero 2 NonZero
+T -> NonZero 3 NonZero
+T -> NonZero 4 NonZero
+T -> NonZero 5 NonZero
+T -> NonZero 6 NonZero
+T -> NonZero 7 NonZero
+T -> NonZero 8 NonZero
+T -> NonZero 9 NonZero
