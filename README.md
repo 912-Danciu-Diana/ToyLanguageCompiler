@@ -44,11 +44,3 @@ States: Prefixed with "S.S ->".
 Alphabet: Prefixed with "Alph ->".
 Transitions: Prefixed with "T ->".
 
-Example:
-I.S -> A
-F.S -> B C
-S.S -> A B C
-Alph -> 0 1
-T -> A 0 B
-T -> B 1 C
-T -> C 0 A
