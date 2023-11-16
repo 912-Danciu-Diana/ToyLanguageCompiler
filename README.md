@@ -38,29 +38,17 @@ Testing String Acceptance
 File Format (FA.in)
 The FA configuration file should follow a specific format:
 
-<FA> ::= <initial_state> <final_states> <states> <alphabet> <transitions>
+Initial state: Prefixed with "I.S ->".
+Final states: Prefixed with "F.S ->".
+States: Prefixed with "S.S ->".
+Alphabet: Prefixed with "Alph ->".
+Transitions: Prefixed with "T ->".
 
-<initial_state> ::= "I.S ->" <state>
-
-<final_states> ::= "F.S ->" <state_list>
-
-<states> ::= "S.S ->" <state_list>
-
-<alphabet> ::= "Alph ->" <symbol_list>
-
-<transitions> ::= { <transition> }
-
-<state_list> ::= <state> { " " <state> }
-
-<symbol_list> ::= <symbol> { " " <symbol> }
-
-<transition> ::= "T ->" <state> " " <symbol> " " <state>
-
-<state> ::= <letter> { <letter> | <digit> }
-
-<letter> ::= "A" | "B" | ... | "Z" | "a" | "b" | ... | "z"
-
-<digit> ::= "0" | "1" | ... | "9"
-
-*********************************************************
-<symbol> ::= <letter> | <digit> | "_"
+Example:
+I.S -> A
+F.S -> B C
+S.S -> A B C
+Alph -> 0 1
+T -> A 0 B
+T -> B 1 C
+T -> C 0 A
