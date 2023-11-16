@@ -28,12 +28,12 @@ displayStates(): Displays the states of the FA. |
 displayAlphabet(): Displays the alphabet of the FA. |
 displayTransitions(): Displays the transitions of the FA. |
 displayInitialState(): Displays the initial state of the FA. |
-displayFinalStates(): Displays the final states of the FA. |
+displayFinalStates(): Displays the final states of the FA. 
 
 Usage found in main class:
 Creating an FA |
 Reading FA from a File |
-Testing String Acceptance |
+Testing String Acceptance 
 
 File Format (FA.in)
 The FA configuration file should follow a specific format:
@@ -42,5 +42,5 @@ Initial state: Prefixed with "I.S ->". |
 Final states: Prefixed with "F.S ->". |
 States: Prefixed with "S.S ->". |
 Alphabet: Prefixed with "Alph ->". |
-Transitions: Prefixed with "T ->". |
+Transitions: Prefixed with "T ->". 
 
