@@ -1,0 +1,120 @@
+Non Terminals: program statement_list complex_statement statement declaration type arraydecl complex_type expression term factor relational_op assignment conditional loop io_statement function return_statement param_list function_call argument_list id letter digit num no non_zero_digit underscore
+Terminals: ; { } ( ) [ ] = + - * / INT BOOL REAL STRING ARRAY OF > < == != >= <= CHECK THEN OTHERWISE END LOOP FROM TO STEP PRINT READ FUNC RETURN , _
+Start: program
+program -> statement_list
+statement_list -> complex_statement
+statement_list -> complex_statement statement_list
+complex_statement -> statement
+statement -> assignment
+statement -> conditional
+statement -> loop
+statement -> io_statement
+statement -> function
+statement -> function_call ;
+statement -> declaration
+statement -> return_statement
+declaration -> complex_type id = expression ;
+declaration -> complex_type id ;
+type -> INT
+type -> BOOL
+type -> REAL
+type -> STRING
+arraydecl -> ARRAY [ num ] OF type
+complex_type -> type
+complex_type -> arraydecl
+expression -> term
+expression -> expression + term
+expression -> expression - term
+expression -> expression relational_op expression
+term -> factor
+term -> term * factor
+term -> term / factor
+factor -> ( expression )
+factor -> id
+factor -> num
+factor -> function_call
+relational_op -> >
+relational_op -> <
+relational_op -> ==
+relational_op -> !=
+relational_op -> >=
+relational_op -> <=
+assignment -> id = expression ;
+conditional -> CHECK expression THEN { statement_list } OTHERWISE { statement_list } END
+conditional -> CHECK expression THEN { statement_list } END
+loop -> LOOP id FROM expression TO expression { statement_list }
+loop -> LOOP id FROM expression TO expression STEP num { statement_list }
+io_statement -> PRINT ( expression ) ;
+io_statement -> READ ( id ) ;
+function -> FUNC id ( param_list ) { statement_list }
+return_statement -> RETURN expression ;
+param_list -> id
+param_list -> id , param_list
+function_call -> id ( argument_list )
+argument_list -> expression
+argument_list -> expression , argument_list
+id -> letter
+id -> letter id
+id -> letter digit
+id -> letter underscore
+letter -> A
+letter -> B
+letter -> C
+letter -> D
+letter -> E
+letter -> F
+letter -> G
+letter -> H
+letter -> I
+letter -> J
+letter -> K
+letter -> L
+letter -> M
+letter -> N
+letter -> O
+letter -> P
+letter -> Q
+letter -> R
+letter -> S
+letter -> T
+letter -> U
+letter -> V
+letter -> W
+letter -> X
+letter -> Y
+letter -> Z
+letter -> a
+letter -> b
+letter -> c
+letter -> d
+letter -> e
+letter -> f
+letter -> g
+letter -> h
+letter -> i
+digit -> 0
+digit -> 1
+digit -> 2
+digit -> 3
+digit -> 4
+digit -> 5
+digit -> 6
+digit -> 7
+digit -> 8
+digit -> 9
+underscore -> _
+non_zero_digit -> 1
+non_zero_digit -> 2
+non_zero_digit -> 3
+non_zero_digit -> 4
+non_zero_digit -> 5
+non_zero_digit -> 6
+non_zero_digit -> 7
+non_zero_digit -> 8
+non_zero_digit -> 9
+num -> + no
+num -> - no
+num -> no
+no -> 0
+no -> digit
+no -> non_zero_digit no
