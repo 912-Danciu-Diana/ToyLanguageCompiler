@@ -178,7 +178,5 @@ public class FiniteAutomaton {
         boolean isAccepted = fa.accepts(inputString);
         System.out.println("The string \"" + inputString + "\" is " + (isAccepted ? "accepted" : "not accepted") + " by the FA.");
         scanner.close();
-
-
     }
 }
